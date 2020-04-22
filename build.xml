@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="warriors" default="jar" basedir="E:\Program Files (x86)\Jenkins\workspace\Test\Demo\src\immoc\com">
+  <path id="classpath">
+    <fileset dir="." includes="lib/*.jar"/>
+  </path>
+  
+ <property name="home_path" value="E:\Program Files (x86)\Jenkins\workspace\Test" />
+  <property name="src_path" value="${home_path}\Demo\src\immoc\com" />
+  <property name="class_path" value="${home_path}\classes" />
+  <property name="jar_path" value="${home_path}\jar" />
+
+
+<!-- 清除-->
+ <!--
+  <target name="clean">  
+    <delete dir="build"/>
+  </target>
+ -->
+
+<!-- 编译-->
+
+  <target name="compile">
+   <mkdir dir="${home_path}/classes"/>
+    <javac srcdir="${src_path}" destdir="${class_path}" encoding="UTF-8" listfiles="true" includeAntRuntime="false">
+      <classpath refid="classpath"/>
+      <compilerarg value="-Xlint:unchecked"/>
+    </javac>
+  </target>
+
+
+<!-- 打包class-->
+  <target name="jar" depends="compile">
+      <mkdir dir="${home_path}/jar"/>
+	<jar destfile="${jar_path}/Testworld.jar" basedir="${class_path}">
+		<!-- 
+			   <manifest>
+				  <attribute name="Main-class" />
+			   </manifest>
+		-->
+	    </jar>
+  </target>
+
+<!-- 运行class-->
+ <!--
+  <target name="run" depends="compile">
+    <java classname="com.yayo.warriors.YayoDaemon">
+      <classpath refid="classpath"/>
+      <classpath>
+        <pathelement path="build/classes"/>
+      </classpath>
+    </java>
+  </target>
+ --> 
+
+
+</project>
