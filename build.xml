@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="warriors" default="jar" basedir="E:\Program Files (x86)\Jenkins\workspace\Test\Demo\src\immoc\com">
+<project name="warriors" default="jar" basedir="E:\ProgramFiles(x86)\Jenkins\workspace\Test\Demo\src\immoc\com">
   <path id="classpath">
     <fileset dir="." includes="lib/*.jar"/>
   </path>
   
- <property name="home_path" value="E:\Program Files (x86)\Jenkins\workspace\Test" />
+ <property name="home_path" value="E:\ProgramFiles(x86)\Jenkins\workspace\Test" />
   <property name="src_path" value="${home_path}\Demo\src\immoc\com" />
   <property name="class_path" value="${home_path}\classes" />
   <property name="jar_path" value="${home_path}\jar" />
